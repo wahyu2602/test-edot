@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/style.css">
+  <!-- icons botstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <title>Test - eDot</title>
+</head>
+
+<body>
+  <nav>
+    <div class="brand">Test-eDot</div>
+    <div class="nav-link-items">
+      <a class="link-item active" href="">Logic</a>
+      <a class="link-item" href="">Jam Dunia</a>
+      <a class="link-item" href="">Drawing Tools</a>
+      <a class="link-item" href="">Daftar Manusia</a>
+      <a class="link-item" href="">javaScript</a>
+    </div>
+    <div class="toggle">
+      <i class="bi bi-list"></i>
+    </div>
+  </nav>
+
+  <div class="nav-sidebar">
+    <a class="link-item item-side" href="">Logic</a>
+    <a class="link-item item-side" href="">Jam Dunia</a>
+    <a class="link-item item-side" href="">Drawing Tools</a>
+    <a class="link-item item-side" href="">Daftar Manusia</a>
+    <a class="link-item item-side" href="">javaScript</a>
+  </div>
+
+  <main>
+    <div class="container">
+      <!-- logic -->
+      <div class="logic page show">
+        <h2 class="mb-2">Question</h2>
+        <p>1. If a clock strikes once at 1 o′clock, twice at 2 o′clock and so on</p>
+        <p class="text-red">How many times will it strike in a day?</p>
+        <p>2. A snail is at the bottom of a 30 foot well. Every hour the snail is able to climb up 3 feet,
+          then immediately slide back down 2 feet.</p>
+        <p class="text-red">How many hours does it take for the snail to
+          get out of the well?</p>
+        <p>3. I live on Sunset Boulevard, where there are 6 houses on my side of the block. The
+          house numbers are consecutive even numbers. The sum of all 6 house numbers is 8790.
+          You don't know which block I live on, and it's a long street, but I will tell you that I live in
+          the lowest number on my side of the block.</p>
+        <p class="text-red">What's my address?</p>
+        <p>4. A man needs to cross a river in a canoe. With him, he has a bag of grain, a chicken,
+          and a fox. He can only carry one of the three at a time. If he leaves the grain and the
+          chicken, the chicken will eat the grain. If he takes the grain, the fox will eat the chicken.</p>
+        <p class="text-red">How does he successfully cross the river with his load?</p>
+
+        <h2 class="mb-2 mt-5">Answer</h2>
+        <p>1. 24</p>
+        <p>2. 30 hours</p>
+        <p>3. 1470</p>
+        <p>4. Chicken</p>
+      </div>
+
+      <!-- jam dunia -->
+      <div class="jam-dunia page">
+        <h1 class="mb-2 text-red">Jam Dunia</h1>
+
+        <p class="return-date"></p>
+      </div>
+
+      <!-- drawing tools -->
+      <div class="drawing-tools page">
+        <h1 class="mb-2">Drawing Tools</h1>
+        <p>1. Persegi</p>
+        <p>2. Segitiga Siku2 Rata Kiri</p>
+        <p>3. Segituga Siku2 Rata Kanan</p>
+
+        <h3 class="mt-2 mb-1">Jenis Bangunan</h3>
+        <select class="input jenis-bangunan">
+          <option selected value="0"> -- Pilih Jenis Bangunan --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+
+        <h3 class="mb-1 mt-2">Ukuran</h3>
+        <input class="input ukuran" type="number">
+
+        <button class="btn btn-lihat mt-2">Lihat</button>
+        <div class="cetak mt-2 mb-5"></div>
+      </div>
+
+      <!-- daftar manusia -->
+      <div class="daftar-manusia page">
+        <h1 class="mb-2">Daftar Manusia</h1>
+        <p id="error" class="text-red feed">Data harus di isi dengan lengkap.</p>
+        <div class="input-group">
+          <label for="nama">Nama : </label>
+          <input id="nama" class="input" type="text">
+        </div>
+        <div class="input-group">
+          <label for="umur">Umur : </label>
+          <input id="umur" class="input" type="number">
+        </div>
+        <label for="kelamin">Kelamin : </label>
+        <div class="input-group mt-1">
+          <input id="Pria" name="kelamin" class="kelamin" type="radio" value="Pria">
+          <label for="Pria">Pria</label>
+        </div>
+        <div class="input-group">
+          <input id="wanita" name="kelamin" class="kelamin" type="radio" value="Wanita">
+          <label for="wanita">Wanita</label>
+        </div>
+        <div class="input-group">
+          <label for="pekerjaan">Pekerjaan : </label>
+          <input id="pekerjaan" class="input" type="text">
+        </div>
+        <button class="btn" id="submit">Submit</button>
+        <button class="btn" id="sort-nama">Sort Nama</button>
+        <button class="btn" id="sort-umur">Sort Umur</button>
+        <button class="btn" id="sort-kelamin">Sort Kelamin</button>
+        <button class="btn" id="sort-pekerjaan">Sort Pekerjaan</button>
+        <div class="mt-2">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Kelamin</th>
+                <th>Pekerjaan</th>
+              </tr>
+            </thead>
+            <tbody class="loop-data">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="javascript page">
+        <h1 class="mb-2">JavaScript</h1>
+
+        <!-- fizzbuzz -->
+        <h3 class="mb-1">FizzBuzz</h3>
+        <div class="input-group">
+          <label for="fizzbuzz">Masukan Angka : </label>
+          <input id="fizzbuzz" class="input" type="number">
+          <button class="mt-1 mb-1 btn btn-fizzbuzz">Lihat</button>
+        </div>
+        <div class="row cetak-fizzbuzz">
+
+        </div>
+
+        <!-- string currency -->
+        <h3 class="mb-1 mt-3 text-red">Convert ke mata uang Rupiah</h3>
+
+        <!-- perkalian -->
+        <h3 class="mb-1 mt-3">Perkalian</h3>
+        <div class="row">
+          <input id="input-1" class="input" type="text">
+          <p class="mx-1">x</p>
+          <input id="input-2" class="input" type="text">
+          <p class="mx-1"> = </p>
+          <div class="hasil-perkalian my-auto"></div>
+        </div>
+        <button class="btn mt-1 sub-perkalian">Hasil</button>
+
+        <!-- fibonacci number -->
+        <h3 class="mb-1 mt-3">Fibonacci</h3>
+        <div class="input-group">
+          <label for="fibonacci">Masukan Angka : </label>
+          <input id="fibonacci" class="input" type="number">
+          <button class="mt-1 mb-1 btn btn-fibonacci">Lihat</button>
+        </div>
+        <div class="row cetak-fibonacci">
+        </div>
+      </div>
+  </main>
+
+  <script src="src/js/route.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
